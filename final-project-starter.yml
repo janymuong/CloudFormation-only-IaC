@@ -342,5 +342,5 @@ Resources:
 
 Outputs:
   LoadBalancerDNS:
-    Description: Read the DNS URL of the load balancer with the intrinsic function - !GetAtt
-    Value: !GetAtt WebAppLB.DNSName
+    Description: Read the DNS URL of the load balancer with the intrinsic function - !Sub prefix http
+    Value: !Sub http://${WebAppLB.DNSName}
