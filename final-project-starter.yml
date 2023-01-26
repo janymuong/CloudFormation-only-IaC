@@ -43,15 +43,37 @@ Parameters:
     Type: String
     Default: t3.medium
 
+  EC2InstanceSize:
+    Description: Linux EC2 instance volume size (GB)
+    Type: String
+
 
 Resources:
 
-  # IAM Role UdacityS3ReadOnlyEC2 (policy of S3 Read-Only Access) -created via Web GUI
+  # ----- IAM Role UdacityS3ReadOnlyEC2 (policy of S3 Read-Only Access) ----#
+  UdacityS3ReadOnlyEC2:
+    Type: AWS::IAM::Role
+    Properties:
+      ManagedPolicyArns:
+        - "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          -
+            Effect: "Allow"
+            Principal:
+              Service:
+                - "ec2.amazonaws.com"
+            Action:
+              - "sts:AssumeRole"
+      Path: "/"
+
   ProfileWithRolesForOurApp:
     Type: AWS::IAM::InstanceProfile
     Properties:
+      Path: "/"
       Roles:
-        - UdacityS3ReadOnlyEC2
+        - !Ref UdacityS3ReadOnlyEC2
 
   mainVPC: 
     Type: AWS::EC2::VPC
@@ -276,7 +298,7 @@ Resources:
       BlockDeviceMappings:
       - DeviceName: "/dev/sdk"
         Ebs:
-          VolumeSize: '10'
+          VolumeSize: !Ref EC2InstanceSize
 
   WebAppGroup:
     Type: AWS::AutoScaling::AutoScalingGroup

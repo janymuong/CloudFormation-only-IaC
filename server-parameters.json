@@ -30,5 +30,9 @@
 	{
 		"ParameterKey": "EC2InstanceType",
 		"ParameterValue": "t3.medium"
+	},
+	{
+		"ParameterKey": "EC2InstanceSize",
+		"ParameterValue": "10"
 	}
 ]
