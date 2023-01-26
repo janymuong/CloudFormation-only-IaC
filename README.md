@@ -1,6 +1,6 @@
 # Deploy a High-availability Web App - AWS CloudFormation
 ---
-"ND9991 - C2- Infrastructure as Code - Deploy a high-availability web app using CloudFormation" project - Cloud DevOps Engineering Courese 2.
+"ND9991 - C2- Infrastructure as Code - Deploy a high-availability web app using CloudFormation" project - ```Cloud DevOps Engineering``` Course 2.
 
 This directory contains the following files:
 
