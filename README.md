@@ -5,7 +5,7 @@
 This directory contains the following files:
 
 ### final-project-starter.yml
-Write CloudFormation code using this YAML template for building the cloud infrastructure, based on spoecification and/or requirements.
+Write CloudFormation code using this YAML template for building the cloud infrastructure, based on specification and/or requirements.
 
 ### server-parameters.json
 A JSON file for increasing the generic nature of the YAML code. For example, the JSON file contains a "ParameterKey" as "EnvironmentName" and "ParameterValue" as "UdacityProject". 
@@ -14,7 +14,7 @@ In YAML code, the `${EnvironmentName}` would be substituted with `UdacityProject
 
 ### Bash scripts
 ```create-stack.sh``` ```delete-stack.sh``` ```update-stack.sh```
-> These are helper scripts that can be used to create, delete, and update CloudFormation stacks.
+> These are (reusable) helper scripts that can be used to create, delete, and update CloudFormation stacks.
 
 ---
 Infrastructure Diagram:
