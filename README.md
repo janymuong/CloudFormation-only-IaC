@@ -1,8 +1,8 @@
 # Deploy a High-availability Web App - AWS CloudFormation
 ---
-"ND9991 - C2- Infrastructure as Code - Deploy a high-availability web app using CloudFormation" project. Cloud DevOps Engineering Courese 2:
+"ND9991 - C2- Infrastructure as Code - Deploy a high-availability web app using CloudFormation" project - Cloud DevOps Engineering Courese 2.
 
-This folder contains the following files:
+This directory contains the following files:
 
 ### final-project-starter.yml
 Write CloudFormation code using this YAML template for building the cloud infrastructure, based on spoecification and/or requirements.
@@ -14,7 +14,7 @@ In YAML code, the `${EnvironmentName}` would be substituted with `UdacityProject
 
 ### Bash scripts
 ```create-stack.sh``` ```delete-stack.sh``` ```update-stack.sh```
-> These are helper scripts that can be used to create delete and update CloudFormation stacks.
+> These are helper scripts that can be used to create, delete, and update CloudFormation stacks.
 
 ---
 Infrastructure Diagram:
